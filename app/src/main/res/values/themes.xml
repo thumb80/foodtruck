@@ -1,0 +1,44 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.FoodTrack" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryVariant">@color/colorGreenAccent</item>
+        <item name="colorOnPrimary">@color/colorWhite</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorGreenAccent</item>
+        <item name="colorSecondaryVariant">@color/colorAccent</item>
+        <item name="colorOnSecondary">@color/colorWhite</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="buttonStyle" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:padding">@dimen/dp_12</item>
+    </style>
+
+    <style name="CalenderViewCustom" parent="theme">
+        <item name="compactCalendarBackgroundColor">@color/colorWhite</item>
+        <item name="compactCalendarTextColor">@color/colorAccent</item>
+        <item name="compactCalendarOtherMonthDaysTextColor">@color/colorBackgroundGrey</item>
+        <item name="compactCalendarCurrentDayTextColor">@color/colorAccent</item>
+        <item name="compactCalendarCurrentDayBackgroundColor">@color/colorGreenAccent</item>
+        <item name="compactCalendarCurrentDayIndicatorStyle">fill_large_indicator</item>
+        <item name="compactCalendarCurrentSelectedDayTextColor">@color/colorAccent</item>
+        <item name="compactCalendarCurrentSelectedDayBackgroundColor">@color/colorGreenAccent</item>
+        <item name="compactCalendarCurrentSelectedDayIndicatorStyle">fill_large_indicator</item>
+        <item name="compactCalendarEventIndicatorStyle">small_indicator</item>
+        <item name="compactCalendarMultiEventIndicatorColor">@color/colorWhite</item>
+        <item name="compactCalendarDisplayOtherMonthDays">true</item>
+        <item name="compactCalendarShouldSelectFirstDayOfMonthOnScroll">true</item>
+        <item name="compactCalendarTextSize">@dimen/sp_24</item>
+    </style>
+
+    <style name="theme" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <item name="android:calendarTextColor">@color/colorWhite</item>
+        <item name="android:calendarViewStyle">@style/Widget.Material3.MaterialCalendar</item>
+    </style>
+
+</resources>

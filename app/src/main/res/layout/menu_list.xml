@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:toos="http://schemas.android.com/tools"
+    android:padding="@dimen/dp_12"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/first_guideline"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/second_guideline"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/menu_list_image"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/first_guideline"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/menu_list_item"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_26"
+        android:textStyle="bold"
+        toos:text="Pizza Marinara"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintStart_toEndOf="@+id/first_guideline"
+        app:layout_constraintEnd_toStartOf="@+id/remove_zutaten"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/remove_zutaten"
+        android:layout_width="@dimen/dp_36"
+        android:layout_height="@dimen/dp_36"
+        android:background="@drawable/minus_sign"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/second_guideline"/>
+
+    <Button
+        android:id="@+id/add_to_order"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/add_sign"
+        app:backgroundTint="@color/colorGreenAccent"
+        app:layout_constraintStart_toEndOf="@+id/second_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

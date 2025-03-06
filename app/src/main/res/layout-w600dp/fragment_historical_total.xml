@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/monthLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorWhite"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_12"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/calendar_view">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/prevMonth"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentStart="true"
+            android:background="@color/colorWhite"
+            android:drawableStart="@drawable/ic_icon_left">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/monthView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:fontFamily="@font/afacad"
+            android:textSize="@dimen/sp_42"
+            android:textStyle="bold"
+            tools:text="@string/app_name"
+            android:gravity="center_horizontal"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/nextMonth"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentEnd="true"
+            android:background="@color/colorWhite"
+            android:drawableEnd="@drawable/ic_icon_right">
+
+        </androidx.appcompat.widget.AppCompatButton>
+
+    </RelativeLayout>
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="@dimen/dp_12"
+        android:paddingLeft="@dimen/dp_12"
+        android:paddingRight="@dimen/dp_12"
+        android:layout_marginTop="@dimen/dp_12"
+        android:theme="@style/CalenderViewCustom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/monthLayout"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbars="horizontal"
+        android:layout_marginTop="@dimen/dp_12"
+        app:layout_constraintTop_toBottomOf="@+id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/orders_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp_12"
+                android:paddingRight="@dimen/dp_12"
+                android:paddingLeft="@dimen/dp_12"
+                android:layout_marginStart="@dimen/dp_40"
+                android:layout_marginEnd="@dimen/dp_40"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:listitem="@layout/historical_order_list"
+                tools:itemCount="4"/>
+
+            <TextView
+                android:id="@+id/no_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textAlignment="center"
+                android:textSize="@dimen/sp_24"
+                android:textColor="@color/colorAccent"
+                android:text="Non ci sono ordini nel giorno selezionato"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/afacad"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/total_day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        tools:text="@string/historical_total"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="italic"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_20"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintBottom_toTopOf="@+id/pizzen_count_text"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pizzen_count_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:fontFamily="@font/afacad"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="italic"
+        tools:text="@string/day_total"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/back_to_home"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/month_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:fontFamily="@font/afacad"
+        android:textSize="@dimen/sp_22"
+        android:textStyle="italic"
+        tools:text="@string/day_total"
+        android:layout_marginEnd="@dimen/dp_12"
+        android:layout_marginBottom="@dimen/dp_20"
+        app:layout_constraintBottom_toTopOf="@+id/total_day_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/MaterialAlertDialog.Material3.Title.Icon"
+        app:backgroundTint="@color/colorGreenAccent"
+        android:id="@+id/back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rückwärts"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/colorAccent"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

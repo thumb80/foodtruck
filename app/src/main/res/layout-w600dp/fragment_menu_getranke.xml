@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@drawable/getranke_background"
+        android:alpha="0.3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline_"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginTop="@dimen/dp_36"
+        app:layout_constraintTop_toBottomOf="@id/guideline_"
+        app:layout_constraintBottom_toTopOf="@+id/guideline">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/menu_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/menu_list"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/complete_order"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/er_bestätigt"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_22"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/MaterialAlertDialog.Material3.Title.Icon"
+        app:backgroundTint="@color/colorGreenAccent"
+        android:id="@+id/back_to_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rückwärts"
+        android:textStyle="bold"
+        android:textSize="@dimen/sp_22"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintTop_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toEndOf="@+id/complete_order"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

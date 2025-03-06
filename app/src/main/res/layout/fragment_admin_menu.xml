@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_1"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_2"
+        android:layout_width="@dimen/dp_2"
+        android:layout_height="@dimen/dp_2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toEndOf="@+id/guideline_1"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/day_total"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:backgroundTint="@color/colorGreenAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/day_total"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/historical_total"/>
+
+        <Button
+            android:id="@+id/admin_zutaten"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:backgroundTint="@color/colorGreenAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admin_zutaten"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@+id/day_total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/admin_getranke"/>
+
+        <Button
+            android:id="@+id/admin_getranke"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:backgroundTint="@color/colorGreenAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admin_getranke"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@+id/admin_zutaten"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/admin_pizzen"/>
+
+        <Button
+            android:id="@+id/admin_pizzen"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:backgroundTint="@color/colorGreenAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admin_pizzen"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@+id/admin_getranke"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/historical_total"/>
+
+        <Button
+            android:id="@+id/historical_total"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            app:backgroundTint="@color/colorGreenAccent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/historical_total"
+            android:textSize="@dimen/sp_24"
+            android:padding="@dimen/dp_20"
+            app:layout_constraintTop_toBottomOf="@+id/day_total"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/start_kiosk_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_kiosk_mode"
+            android:fontFamily="@font/afacad"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historical_total"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

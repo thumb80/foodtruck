@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_dialog_grey"
+    android:padding="@dimen/dp_40"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/afacad"
+        android:text="@string/insert_name"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/insert_name_edit"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/insert_name_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/insert_name_hint"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/confirm_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/esc_confirm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nein"
+        android:textSize="@dimen/sp_26"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintTop_toBottomOf="@+id/insert_name_edit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_name"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/confirm_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ja"
+        android:textSize="@dimen/sp_26"
+        android:fontFamily="@font/afacad"
+        app:layout_constraintTop_toBottomOf="@+id/insert_name_edit"
+        app:layout_constraintStart_toEndOf="@+id/esc_confirm_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
