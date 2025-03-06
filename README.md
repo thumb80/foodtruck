@@ -1,4 +1,4 @@
-# palco-client
+# food-truck
 Android App Food Truck :
 
  - this app integrates koin for dependency injection
