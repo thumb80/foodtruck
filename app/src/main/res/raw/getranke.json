@@ -1,0 +1,20 @@
+[
+	{
+		"id" : 1,
+		"name" : "Acqua Minerale 0.5 l",
+		"price" : 3.00,
+		"isPizzen" : null
+	},
+	{
+		"id" : 2,
+		"name" : "Coca cola 0.45 l",
+		"price" : 3.00,
+		"isPizzen" : null
+	},
+	{
+		"id" : 3,
+		"name" : "Caffè Espresso",
+		"price" : 3.50,
+		"isPizzen" : null
+	}
+]

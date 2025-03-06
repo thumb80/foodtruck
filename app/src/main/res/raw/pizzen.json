@@ -1,0 +1,74 @@
+[
+	{
+		"id" : 1,
+		"name" : "Margherita",
+		"price" : 15.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 2,
+		"name" : "Prosciutto & Funghi",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 3,
+		"name" : "Rustica",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 4,
+		"name" : "Vegetariana",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 5,
+		"name" : "Calabrese",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 6,
+		"name" : "Napoli",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 7,
+		"name" : "Quattro Stagioni",
+		"price" : 20.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 8,
+		"name" : "Tonno",
+		"price" : 20.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 9,
+		"name" : "Contadino",
+		"price" : 20.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 10,
+		"name" : "Arrabbiata",
+		"price" : 19.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 11,
+		"name" : "4 Formaggi",
+		"price" : 18.00,
+		"isPizzen" : 1
+	},
+	{
+		"id" : 12,
+		"name" : "Pizza con tutto",
+		"price" : 20.00,
+		"isPizzen" : 1
+	}
+]
